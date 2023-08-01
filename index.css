@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    background-color: black;
+    position: flex;
+}
+
+.big-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.bg {
+    background-attachment: fixed !important;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+header {
+    opacity: 0.9;
+    display: flex;
+    width: 100%;
+    height: 90px;
+    align-self: center;
+    background-color: #130132;
+    justify-content: center;
+}
+
+header h1 {
+    position: relative;
+    top: 15px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: #C08B00;
+}
+
+.general {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #2c3e50;
+    margin: 0 auto;
+    border-radius: 20px;
+    transform: translateY(50%);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+.content .inputbox {
+    position: relative;
+    margin-top: 25px;
+    left: -15px;
+}
+
+.content label {
+    font-size: 18px;
+    color: #C8E300;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.content input[type="text"] {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #677500;
+    outline: none;
+    color: aliceblue;
+    font-size: 16px;
+    box-shadow: 0 3px 4px red;
+}
+
+.button {
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+
+button {
+    border-radius: 5px;
+    padding: 10px 14px;
+    background-color:#130132;
+    box-shadow: -0.25rem -0.25rem 0 0#00b2eb;
+    transition: background-color .2s ease,transform .24s cubic-bezier(.175,.885,.32,1.275),box-shadow .24s cubic-bezier(.175,.885,.32,1.275);
+    color: wheat;
+    border: 2px solid #130132;
+    
+}
+
+.inputbox {
+    position: relative;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    transition: 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label
+{
+    top: -8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+button:hover {
+    transform: translate(-0.25rem,-0.25rem);
+    box-shadow: 0 0 0 blue;
+    font-weight: 200;
+}
+
+.info {
+    display: none;
+    position: relative;
+    max-width: 500px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: #2c3e50;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: 1px solid wheat;
+    top: 150px;
+}
+
+.info .info_text{
+    font-size: 30px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    background-color: #130132;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+footer ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+footer ul li {
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    color: whitesmoke;
+
+}
+
+footer ul li:first-child{
+
+    border-right: 2px solid whitesmoke;
+}
+
+
+footer ul li:last-child{
+    padding-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 110px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    footer ul{
+        display: flex;
+        height: 200px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer ul li:first-child {
+        border: none;
+        border-bottom: 2px solid whitesmoke;
+        padding-bottom: 7px;
+    }
+
+    footer ul li:last-child {
+        margin-top: 0;
+    }
+}
